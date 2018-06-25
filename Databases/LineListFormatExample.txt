@@ -1,0 +1,70 @@
+# This file contains an example format for new line lists to be entered
+# into the sqlite3 atomic line database.
+# Note: All lines prefaced with # are ignored as comments
+#
+# The first line designates the format of the individual line information
+# column designations are:
+# wl : wavelength in Angstroms
+# ion : element/ionization state in XX.Y format - ie. Fe II = 26.1
+# ep : excitation potential of the lower state
+# wn : wave number of the lower state
+# loggf : the loggf value for this line
+# ref : the number of the (primary) reference listed at end of file
+#         If omitted, it is assumed that this reference is the primary
+#         source, or modified another primary source.
+# damp : the (vanDerWaals) damping coefficient (optional)
+#         If omitted, existing values (if the line is already in the DB)
+#         or average of other values of the same element will be used.
+# solar : the width of this ine (in mA) in the Solar spectrum (optional)
+# note : (Must end the text line) A character string containing notes
+#        on this line.
+#
+format: ion wl ep loggf ref
+# All sections must be separated by a set of five(5) dashes
+-----
+#
+# Line data follows. (terminates with a line beginning with '-----')
+8.0  6300.31  0.000 -9.750  1
+# .... more lines ...
+#
+-----
+# 
+# The references section begins after the first ----- after the 
+# line list. The first reference will be the article from which
+# the lines were taken. Subsequent publications are matched with 
+# the reference numbers given in the 'ref' column of the lines
+# above. These refs are entered as the primary source for the 
+# line information with this paper (source) listed as the secondary.
+#
+# Each entry has the format:
+#
+# First author name (Last, Init.)
+# Article title (optional - leave blank if omitted)
+# Publication date (year month day) (month and day are optional)
+# Publication (abbreviation)
+# Volume information (Volume Issue)
+# Pages (Start End)
+# Secondary (etc.) author list
+#
+# Example:
+#
+Gratton, R.G.
+Abundances for metal-poor stars with accurate parallaxes
+2003 June
+A&A
+404
+187 210
+Carretta, E.
+Claudi, R.
+Lucatello, S.
+Barbieri, M.
+-----
+Allende-Prieto, C.
+A Reappraisal of the Solar Photospheric C/O Ratio
+2002 July
+ApJL
+573
+137 140
+Lambert, D.L.
+Asplund, M.
+
