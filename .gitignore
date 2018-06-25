@@ -1,0 +1,42 @@
+# Users get to build their own database
+Databases/Cluster_Data*
+Databases/EnteredIntoDB/*
+Databases/NewLines/*
+
+
+# Users should get their own model files, as we cannot 
+# distribute them through this project
+Models/ATLASModels/*
+Models/CK_ATLAS_Models/*
+Models/MARCS_PlaneParallel/*
+Models/MARCS_Spherical/*
+Isochrones/IsoData/*
+
+# No compiled files, please
+*.pyc
+*__pycache__*
+
+# Obsolete files are obsolete
+Obsolete/*
+
+# Development files are under development...
+Development/*
+
+# Do not include outputed plots and tables
+Plots/CoGPlots/*
+Plots/DetectionLimits/*
+Plots/Elems/*
+Plots/MCPlots/*
+Plots/RelElems/*
+Plots/SpectroscopicParms/Logg/*
+Plots/SpectroscopicParms/Teff/*
+Plots/SpectroscopicParms/Vturb/*
+Plots/TvsEP/*
+Plots/XPvsAb/*
+Tables/*
+
+# Random top-level files
+/*.tex
+/*.pdf
+/*.txt
+
